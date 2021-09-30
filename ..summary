@@ -1,0 +1,46 @@
+
+===================================================================
+  Welcome to HAPGEN_v2.2.0 (01/04/2011)
+  Zhan Su, Peter Donnelly, Jonathan Marchini
+===================================================================
+
+Command line input is:
+/home/shussain/hapgen2/hapgen2 -m /home/shussain/hapgen2/1000GP_Phase3/genetic_maps/genetic_map_chr22_combined_b37.txt -l /home/shussain/hapgen2/1000GP_Phase3/data/chr22.legend -h /home/shussain/hapgen2/1000GP_Phase3/data/chr22.haps -o . -n 1200 0 -int 45364609 45448071 -dl 45364609 0 0 0 -no_haps_output 
+
+FILE INPUTS
+                                            haplotype file: /home/shussain/hapgen2/1000GP_Phase3/data/chr22.haps
+                                               legend file: /home/shussain/hapgen2/1000GP_Phase3/data/chr22.legend
+                                          genetic map file: /home/shussain/hapgen2/1000GP_Phase3/genetic_maps/genetic_map_chr22_combined_b37.txt
+                                             tag snps file: 
+FILE OUTPUTS
+                                               output file: .
+                                              summary file: ..summary
+PARAMETER INPUTS
+                                  no. controls to simulate: 1200
+                                     no. cases to simulate: 0
+                                              disease loci: (1) 45364609 
+                                           disease alleles: (1) 0 
+                             heterozygote/homozygote risks: (1) 0.00/0.00 
+                                                     lower: 45364609
+                                                     upper: 45448071
+                                                        Ne: 11418
+                                                     theta: -1
+
+Reading genetic map file ... done
+                                      number of rates read: 43414
+
+
+Reading haplotype and legend files: looking for SNPs in [45364609, 45448071] ... done
+                                      number of haplotypes: 5008
+                                   number of SNPs in total: 1055454
+                                number of SNPs in interval: 3000
+
+
+Random seed set to 0.31944
+theta not set, so setting to a default value of 0.109937
+
+Processing disease loci ... 
+snp at position 4.53646e+07 has frequency 0, so it has been removed from the set of disease loci.
+done 
+
+No suitable disease loci. Program terminated.

@@ -1,0 +1,25 @@
+Seq	Host	Starttime	JobRuntime	Send	Receive	Exitval	Signal	Command
+1	:	1632660561.153	     0.061	0	0	127	0	misslog -j 4 python\ train.py\ 0.5\ 12\ p\ 0.3\ 3000
+2	:	1632660561.177	     0.043	0	0	127	0	misslog -j 4 python\ train.py\ 0.5\ 12\ ln\ 0.3\ 3000
+3	:	1632660561.181	     0.045	0	0	127	0	misslog -j 4 python\ train.py\ 0.5\ 17\ p\ 0.5\ 3000
+4	:	1632660561.184	     0.046	0	0	127	0	misslog -j 4 python\ train.py\ 0.5\ 17\ ln\ 0.5\ 3000
+5	:	1632660561.187	     0.049	0	0	127	0	misslog -j 4 python\ train.py\ 0.5\ 34\ p\ 0.7\ 3000
+6	:	1632660561.190	     0.050	0	0	127	0	misslog -j 4 python\ train.py\ 0.5\ 34\ ln\ 0.7\ 3000
+7	:	1632660561.194	     0.050	0	0	127	0	misslog -j 4 python\ train.py\ 0.5\ 35\ p\ 0.5\ 3000
+8	:	1632660561.197	     0.052	0	0	127	0	misslog -j 4 python\ train.py\ 0.5\ 35\ ln\ 0.5\ 3000
+9	:	1632660561.200	     0.055	0	0	127	0	misslog -j 4 python\ train.py\ 0.5\ 43\ p\ 0.7\ 3000
+10	:	1632660561.204	     0.055	0	0	127	0	misslog -j 4 python\ train.py\ 0.5\ 43\ ln\ 0.7\ 3000
+11	:	1632660561.207	     0.056	0	0	127	0	misslog -j 4 python\ train.py\ 0.5\ 50\ p\ 0.7\ 3000
+12	:	1632660561.211	     0.058	0	0	127	0	misslog -j 4 python\ train.py\ 0.5\ 50\ ln\ 0.7\ 3000
+13	:	1632660561.220	     0.053	0	0	127	0	misslog -j 4 python\ train.py\ 0.7\ 28\ p\ 0.7\ 3000
+14	:	1632660561.225	     0.050	0	0	127	0	misslog -j 4 python\ train.py\ 0.7\ 28\ ln\ 0.7\ 3000
+15	:	1632660561.230	     0.045	0	0	127	0	misslog -j 4 python\ train.py\ 0.7\ 29\ p\ 0.5\ 3000
+16	:	1632660561.235	     0.041	0	0	127	0	misslog -j 4 python\ train.py\ 0.7\ 29\ ln\ 0.5\ 3000
+17	:	1632660561.240	     0.036	0	0	127	0	misslog -j 4 python\ train.py\ 0.95\ 15\ p\ 0.7\ 3000
+18	:	1632660561.245	     0.032	0	0	127	0	misslog -j 4 python\ train.py\ 0.95\ 15\ ln\ 0.7\ 3000
+19	:	1632660561.249	     0.029	0	0	127	0	misslog -j 4 python\ train.py\ 0.95\ 17\ p\ 0.5\ 3000
+20	:	1632660561.254	     0.024	0	0	127	0	misslog -j 4 python\ train.py\ 0.95\ 17\ ln\ 0.5\ 3000
+21	:	1632660561.259	     0.019	0	0	127	0	misslog -j 4 python\ train.py\ 0.95\ 27\ p\ 0.5\ 3000
+22	:	1632660561.263	     0.016	0	0	127	0	misslog -j 4 python\ train.py\ 0.95\ 27\ ln\ 0.5\ 3000
+23	:	1632660561.268	     0.012	0	0	127	0	misslog -j 4 python\ train.py\ 0.95\ 35\ p\ 0.5\ 3000
+24	:	1632660561.273	     0.006	0	0	127	0	misslog -j 4 python\ train.py\ 0.95\ 35\ ln\ 0.5\ 3000
