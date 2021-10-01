@@ -1,10 +1,16 @@
 SHELL:=/bin/bash
 #CEU hapmap3: https://mathgen.stats.ox.ac.uk/impute/data_download_1000G_pilot_plus_hapmap3.html
-ref_panel_dir=/home/shussain/hapgen2/1000GP_Phase3/
-
+#ref_panel_dir=/home/shussain/hapgen2/1000GP_Phase3/
+ref_panel_dir=/home/shussain/hapgen2/CEU_impute/
 n_pheno=1
-dir=.
 genVar=0.95
+name=`date +'%d%m%Y'`
+dir=d_$(d)/genVar_$(genvar)/h2s_$(h2s)/sim_$(i)
+
+threshold: $(dir)/PS/output
+	mkdir -p $(outdir)/$(dir)
+	python train.py $(genvar) $(i) $(method) $(h2s) $(d) /home/shussain/Simulated_data/$(name)/$(dir) $(outdir)/$(dir)
+
 
 sim: $(dir)/PS/output
 #generate genotype in oxford format. chromosome $chr
@@ -24,7 +30,7 @@ $(dir)/prelim/prelim_$(chr):
 					  -int $$first $$dth \
 					  -dl $$first 0 0 0 \
 					  -no_haps_output
-	touch $@
+	
 
 #transform from oxford format into plink format
 $(dir)/prelim/prelim_plink_chr$(chr): $(dir)/prelim/prelim_$(chr)
@@ -35,13 +41,13 @@ $(dir)/prelim/prelim_plink_chr$(chr): $(dir)/prelim/prelim_$(chr)
 	touch $@
 
 
-$(dir)/PS/output: $(dir)/prelim/prelim_plink_chr$(chr)
+$(dir)/PS/output: $(dir)/prelim/prelim_$(chr)
 	mkdir -p $(dir)/PS
 	
 	Rscript commandlineFunctions.R \
 			--NrSamples=$(n) --NrPhenotypes=$(n_pheno) \
-			--tNrSNP=$(d) --format="plink"\
-			--genotypefile=$(dir)/prelim/prelim_plink_chr$(chr).bed \
+			--tNrSNP=$(d) --format="oxgen"\
+			--genotypefile=$(dir)/prelim/prelim_$(chr).controls \
 			--cNrSNP=$(dc) \
 			--genVar=$(genVar) --h2s=$(h2s) --phi=1 \
 			--directory=$(dir)/PS \
@@ -50,15 +56,12 @@ $(dir)/PS/output: $(dir)/prelim/prelim_plink_chr$(chr)
 			--saveTable \
 			--savePLINK \
 
+	rm -rf temp
+	mkdir -p ~/Simulated_data/$(name)/$(dir)
+	mv $(dir)/* ~/Simulated_data/$(name)/$(dir)
 	echo !!
 
 
-
-move: 
-	rm -rf temp
-	rm -f $(dir)/prelim/*.gen 
-	mkdir -p ~/Simulated_data/`date +'%d%m%Y'`/$(dir)
-	cp $(dir) -r ~/Simulated_data/`date +'%d%m%Y'`/$(dir)
 
 clean:
 	rm -rf prelim
