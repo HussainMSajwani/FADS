@@ -3,7 +3,7 @@ from lassonet import LassoNetClassifier
 
 from .input import get_dset
 from .utils import which_GPU
-from .models import supervised_autoencoder
+#from .models import supervised_autoencoder
 from .auc import calculate_auc
 
 import matplotlib.pyplot as plt
