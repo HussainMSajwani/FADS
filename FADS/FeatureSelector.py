@@ -1,5 +1,5 @@
 from lassonet import LassoNetClassifier
-from pyHSICLasso import HSICLasso
+#from pyHSICLasso import HSICLasso
 
 from .input import get_dset
 from .utils import which_GPU
