@@ -125,7 +125,7 @@ class LassoNet(FeatureSelector):
         self.architecture = architecture
 
     def train(self):
-        self.model = LassoNetClassifier(verbose=False, hidden_dims=self.architecture, device=f"cuda:{which_GPU()}")
+        self.model = LassoNetClassifier(verbose=False, hidden_dims=self.architecture)
         
         self.ln_path = self.model.path(self.dset["X_train"]/2, self.dset["y_train"][:, 1])
         self.importance = self.model.feature_importances_.cpu().numpy()
